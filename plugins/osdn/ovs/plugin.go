@@ -61,7 +61,7 @@ func CreatePlugin(registry *osdn.Registry, pluginName string, hostname string, s
 	return plugin, err
 }
 
-func (plugin *ovsPlugin) PluginStartMaster(clusterNetwork *net.IPNet, hostSubnetLength uint) error {
+func (plugin *ovsPlugin) PluginStartMaster(clusterNetwork *net.IPNet, hostSubnetLength uint32) error {
 	if err := plugin.SubnetStartMaster(clusterNetwork, hostSubnetLength); err != nil {
 		return err
 	}
